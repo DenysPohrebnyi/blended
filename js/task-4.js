@@ -7,3 +7,10 @@ const stonesArray = [
   { name: 'Сапфір', price: 400, quantity: 7 },
   { name: 'Щебінь', price: 150, quantity: 100 },
 ]
+function calcTotalPrice(stones, stonesName) {
+  for (const stone of stones) {
+    const { name, price, quantity } = stone;
+    if (stonesName === name) {return price * quantity}
+  }
+}
+console.log(calcTotalPrice(stonesArray, 'Брилліант'));
